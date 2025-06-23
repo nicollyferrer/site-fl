@@ -156,7 +156,7 @@ function editarCadastroSelecionado() {
         return;
     }
     localStorage.setItem("indiceEdicao", indiceSelecionado);
-    window.location.href = "cadastrar.html";
+    window.location.href = "cadastrar.html"; // CORRETO
 }
 
 function excluirCadastroSelecionado() {
@@ -385,20 +385,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("board-dias-ultimo").textContent = diasDesdeUltimoCadastro();
 });
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtém o caminho da URL atual (ex: /menu.html, /dashboard.html)
     const currentPath = window.location.pathname;
-
-    // Seleciona todos os botões da sidebar
     const sidebarButtons = document.querySelectorAll('.sidebar .btn');
 
     sidebarButtons.forEach(button => {
-        // Obtém o href de cada botão
         const buttonHref = button.getAttribute('href');
-
-        // Verifica se o href do botão corresponde ao caminho da URL atual
-        // Usamos endsWith para lidar com casos onde o caminho pode ser mais complexo
         if (currentPath.endsWith(buttonHref)) {
-            // Adiciona a classe 'selecionado' ao botão correspondente
             button.classList.add('selecionado');
         }
     });
