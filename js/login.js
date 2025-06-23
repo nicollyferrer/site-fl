@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault(); 
     } else {
       e.preventDefault();
-      window.location.href = "html/dashboard.html";
+      window.location.href = "html/dashboard.html"; // CORRETO
     }
   });
 });
-
