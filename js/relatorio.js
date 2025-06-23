@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!cliente) {
     alert("Nenhum cliente selecionado para exibir o relatório.");
-    window.location.href = "listagem.html";
+    window.location.href = "listagem.html"; // CORRETO
     return;
   }
 
@@ -25,5 +25,5 @@ function imprimirRelatorio() {
 }
 
 function voltar() {
-  window.location.href = "listagem.html";
+  window.location.href = "listagem.html"; // CORRETO
 }
