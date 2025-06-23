@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+
+  <title>Login</title>
+</head>
+<body class="login-body">
+
+  <div class="container">
+    <h1>LOGIN</h1>
+    <form id="login-form">
+      <div class="input-box">
+        <input id="email" placeholder="Email" type="email">
+        <i class="bx bxs-user"></i>
+      </div>
+      <div class="input-box">
+        <input id="senha" placeholder="Senha" type="password">
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+       
+      <div id="mensagem-erro" class="erro"></div>
+      <button type="submit" class="entrar">Entrar</button>
+    </form>
+  </div>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>

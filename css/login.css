@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.login-body {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    background: url(/img/fundo_login.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    border: 1px solid rgb(25, 21, 82);
+    border-radius: 15px;
+    color:rgb(245, 234, 255);
+    padding: 50px 40px;
+    box-shadow: rgba(6, 21, 120, 0.89) 0px 0px 0px 2px, rgba(12, 44, 82, 0.825) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;
+    background-color: rgba(0, 0, 0, 0.021);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-box{
+    position:relative;
+    width: 100%;
+    height: 30px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 30px;
+    background-color: #ffffffdb;
+    border: 2px solid rgb(70, 68, 68);
+    border-radius: 40px;
+    margin-top: 15px;
+    outline: none;
+    font-size: 13px;
+    color: rgb(22, 21, 21);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: rgb(136, 127, 127);
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 80%;
+    color:rgb(136, 127, 127);
+    font-size: 20px;
+}
+
+.entrar {
+    width: 320px;
+    height: 50px;
+    margin-top: 40px;
+    background-color: #081a4b;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(255, 250, 250);
+    font-weight: 600;
+}
+
+.entrar:hover{
+    background-color:#030d299f;
+    transition: 0.5;
+    border: 2px solid rgb(128, 128, 128);
+
+}
+
+.erro {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+
+
+
+
+

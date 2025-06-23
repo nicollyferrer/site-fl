@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Listagem de Cadastros</title>
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="/css/listagem.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="dashboard-body">
+
+  <nav class="sidebar">
+    <div class="logo">
+      <img src="/img/Design sem nome (2).png" alt="Logo Operação Curiosidade" height="70">
+    </div>
+    <h3>Menu</h3>
+    <div class="menu-items">
+      <a href="dashboard.html" class="btn"><i class="fa-solid fa-house"></i> Início</a>
+      <a href="listagem.html" class="btn"><i class="fa-solid fa-table-list"></i> Relatórios</a>
+      <a href="cadastrar.html" class="btn"><i class="fa-solid fa-user-plus"></i> Cadastrar</a>
+    </div>
+    <a href="index.html" class="btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+  </nav>
+
+  <header class="main-header">
+    <div class="perfil-icone">
+      <i class="fa-solid fa-user"></i>
+    </div>
+  </header>
+
+  <main class="main layout">
+
+    <div class="container">
+      <div class="top-section">
+        <div class="titulo-barra">
+          <h1>Relatório de Clientes</h1>
+          <div class="busca">
+            <input type="text" id="buscaInput" placeholder="Buscar por nome, email ou telefone..." />
+          </div>
+        </div>
+
+        <div class="action-bar">
+          <div class="filtros">
+            <button id="btnMaisNovos" class="btn-filtro" title="Mais novos">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+            <button id="btnMaisAntigos" class="btn-filtro" title="Mais Antigos">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
+
+          <div class="crud">
+            <button id="btnEditar">Editar</button>
+            <button id="btnExcluir">Excluir</button>
+          </div>
+        </div>
+      </div>
+
+
+      <table id="tabela-cadastros">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Gênero</th>
+            <th>Interesses</th>
+            <th>Sentimentos</th>
+            <th>Valores</th>
+          </tr>
+        </thead>
+        <tbody id="lista-cadastros">
+        </tbody>
+      </table>
+  </main>
+  </div>
+  </div>
+
+  <div id="popupConfirmacao" class="popup-overlay">
+  <div class="popup-box">
+    <p id="popupMensagem"></p>
+    <div class="popup-botoes">
+      <button id="popupOk">OK</button>
+      <button id="popupCancelar">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+
+ 
+</body>
+
+<div id="relatorioModal" class="modal-overlay">
+  <div class="modal-content">
+    <h1>Relatório do Cliente</h1>
+    <div id="detalhesCliente" class="relatorio"></div>
+
+    <div class="acoes">
+      <button onclick="window.print()">Imprimir</button>
+      <button onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+</div>
+ <script src="../js/listagem.js"></script>
+</html>

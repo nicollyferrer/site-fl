@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #35219d;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+ 
+  width: 90%; 
+  max-width: 500px; 
+  min-height: 500px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  width: 100%; 
+}
+
+.dados {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  width: 100%; 
+  max-width: 500px; 
+  margin: 0 auto; 
+  padding-bottom: 80px; 
+}
+
+.dados p {
+  margin: 0.75rem 0;
+  color: #555;
+  width: 100%; 
+  padding: 0.5rem;
+}
+
+.dados strong {
+  color: #333;
+}
+
+.acoes{
+  display: flex;
+  justify-content: flex-end; 
+  gap: 12px;
+  padding: 0;  
+  width: auto; 
+  margin-top: auto;
+}
+
+button {
+  padding: 0.4rem 1.2rem; 
+  background-color: #35219d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem; 
+  transition: all 0.3s ease;
+  white-space: nowrap; 
+  margin-top: auto;
+}
+
+button:hover {
+  background-color: #2a1a7d;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .container, .container * {
+    visibility: visible;
+  }
+  
+  .acoes,
+  .acoes button {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  .container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 700px;
+    height: 500px;
+    margin: 0;
+    padding: 1cm;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .dados {
+    justify-content: flex-start;
+    margin-top: 0; 
+    padding-bottom: 0;
+  }
+}
+#detalhesCliente{
+    flex:1;
+    width: 100%;
+}

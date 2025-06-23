@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+
+    <nav class="sidebar">
+        <div class="logo">
+            <img src="/img/Design sem nome (2).png" alt="Logo Operação Curiosidade" height="70">
+        </div>
+        <h3>Menu</h3>
+        <div class="menu-items">
+            <a href="dashboard.html" class="btn"><i class="fa-solid fa-house"></i> Início</a>
+            <a href="listagem.html" class="btn"><i class="fa-solid fa-table-list"></i> Relatórios</a>
+            <a href="cadastrar.html" class="btn"><i class="fa-solid fa-user-plus"></i> Cadastrar</a>
+        </div>
+        <a href="index.html" class="btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+    </nav>
+
+    <header class="main-header">
+        <div class="busca">
+            <input type="text" id="buscaInput" placeholder="Buscar por nome, email ou telefone..." />
+        </div>
+        <div class="perfil-icone">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-area">
+            <div class="cards">
+                <div class="card">
+                    <h3>Pessoas Cadastradas</h3>
+                    <p id="totalClientes">0</p>
+                </div>
+                <div class="card">
+                    <h3>Último mês</h3>
+                    <p id="board-novos-cadastros">0</p>
+                </div>
+                <div class="card">
+                    <h3>Último cadastro</h3>
+                    <p id="board-dias-ultimo">0</p>
+                </div>
+                <div class="card">
+                    <h3>Último Acesso</h3>
+                    <p id="ultimoAcesso">--/--/----</p>
+                </div>
+            </div>
+
+            <div class="tabela-container">
+                <h3 class="titulo-tabela">Últimos Usuários Cadastrados</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Data de Criação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaClientes"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Operação Curiosidade. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+            <a href="#">Política de Privacidade</a>
+        </div>
+    </footer>
+
+    <div id="relatorioModal" class="modal-overlay">
+        <div class="modal-content">
+            <h1>Relatório do Cliente</h1>
+            <div id="detalhesCliente" class="relatorio"></div>
+            <div class="acoes">
+                <button onclick="window.print()">Imprimir</button>
+                <button onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

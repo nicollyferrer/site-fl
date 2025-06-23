@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="stylesheet" href="/css/cadastrar.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <title>Cadastro - Parte 2</title>
+</head>
+<body>
+  <button class="voltar-button" onclick="history.back()">
+  <i class="fa-solid fa-arrow-left"></i>
+</button>
+
+
+  <div class="container">
+    <div class="form-image">
+      <img src="/img/undraw_my-files_1xwx.svg" alt="Imagem ilustrativa" />
+    </div>
+    <div class="form">
+
+    <form id="formFinalizar">
+     <div class="form-header">
+       <div class="titulo-fixo">
+         <h2>Cadastrar novo cliente</h2>
+     </div>
+     </div>
+
+
+  <div class="input-group">
+    <div class="input-box full-width">
+      <label for="interesses">Interesses</label>
+      <textarea id="interesses" name="interesses" rows="4" placeholder="Ex: Interesse por culinária..."></textarea>
+      <span class="error-message" id="error-interesses"></span>
+    </div>
+
+    <div class="input-box full-width">
+      <label for="sentimentos">Sentimentos</label>
+      <textarea id="sentimentos" name="sentimentos" rows="4" placeholder="Ex: Sentiu-se acolhida..."></textarea>
+      <span class="error-message" id="error-sentimentos"></span>
+    </div>
+
+    <div class="input-box full-width">
+      <label for="valores">Valores</label>
+      <textarea id="valores" name="valores" rows="4" placeholder="Ex: Valoriza o respeito..."></textarea>
+      <span class="error-message" id="error-valores"></span>
+    </div>
+  </div>
+
+  <div class="buttons-duplos">
+  <button type="button" onclick="voltarPagina()">Voltar</button>
+  <button type="submit">Finalizar Cadastro</button>
+</div>
+
+</form>
+<div id="etapaFinal" style="display: none;">
+  <h2>Cadastro concluído!</h2>
+  <p>Os dados foram salvos com sucesso.</p>
+  <button onclick="verListagem()">Ver listagem</button>
+  <button onclick="voltarMenu()">Voltar ao menu</button>
+</div>
+
+
+
+  <script src="../js/cadastrar.js"></script>
+
+</div>
+</div>
