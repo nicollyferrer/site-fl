@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const pathname = window.location.pathname;
 
-    // Função para exibir mensagem de erro abaixo do campo
     function showError(fieldId, message) {
         const errorElement = document.getElementById(`error-${fieldId}`);
         if (errorElement) {
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Função para limpar todas as mensagens de erro
     function clearErrors() {
         document.querySelectorAll(".error-message").forEach(el => {
             el.textContent = "";
@@ -36,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (buttonContinuar) {
             buttonContinuar.addEventListener("click", () => {
-                clearErrors(); // Limpa erros anteriores ao tentar enviar
-                let isValid = true; // Flag para verificar se todos os campos são válidos
+                clearErrors(); 
+                let isValid = true; 
 
                 const nome = document.getElementById("firstname").value.trim();
                 const sobrenome = document.getElementById("lastname").value.trim();
@@ -67,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 if (!isValid) {
-                    return; // Impede a continuação se houver erros
+                    return; 
                 }
 
                 const dadosCliente = {
@@ -79,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 };
 
                 localStorage.setItem("clienteCadastro", JSON.stringify(dadosCliente));
-                window.location.href = "cadastrar-pt2.html";
+                window.location.href = "cadastrar-pt2.html"; // CORRETO
             });
         }
     }
@@ -103,8 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (form2 && etapaFinalDiv) {
             form2.addEventListener("submit", function(event) {
                 event.preventDefault();
-                clearErrors(); // Limpa erros anteriores ao tentar enviar
-                let isValid = true; // Flag para verificar se todos os campos são válidos
+                clearErrors(); 
+                let isValid = true; 
 
                 const interesses = document.getElementById("interesses").value.trim();
                 const sentimentos = document.getElementById("sentimentos").value.trim();
@@ -124,15 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 if (!isValid) {
-                    return; // Impede a continuação se houver erros
+                    return;
                 }
 
                 const parte1 = JSON.parse(localStorage.getItem("clienteCadastro"));
 
                 if (!parte1) {
-                    // Mantido o alert aqui para um erro mais grave (dados da etapa anterior ausentes)
                     alert("Erro: informações da etapa 1 não encontradas. Retornando ao cadastro inicial.");
-                    window.location.href = "cadastrar.html";
+                    window.location.href = "cadastrar.html"; // CORRETO
                     return;
                 }
 
@@ -166,9 +163,9 @@ function voltarPagina() {
 }
 
 function voltarMenu() {
-    window.location.href = "dashboard.html";
+    window.location.href = "dashboard.html"; // CORRETO
 }
 
 function verListagem() {
-    window.location.href = "listagem.html";
+    window.location.href = "listagem.html"; // CORRETO
 }
