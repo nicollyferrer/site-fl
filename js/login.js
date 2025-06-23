@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault(); 
     } else {
       e.preventDefault();
-      window.location.href = "dashboard.html";
+      window.location.href = "html/dashboard.html";
     }
   });
 });
